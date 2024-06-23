@@ -1,0 +1,105 @@
+/* app/roadmap/roadmap.css */
+
+/* Define color variables */
+:root {
+  --background-color: #fff;
+  --text-color: #000;
+  --border-color: #ddd;
+  --card-background-color: #fff;
+  --button-background-color: #0070f3;
+  --button-hover-background-color: #005bb5;
+  --button-text-color: #fff;
+  --box-shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-color: #121212;
+    --text-color: #e0e0e0;
+    --border-color: #444;
+    --card-background-color: #1e1e1e;
+    --button-background-color: #1e88e5;
+    --button-hover-background-color: #1565c0;
+    --button-text-color: #fff;
+    --box-shadow-color: rgba(0, 0, 0, 0.5);
+  }
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+header, footer {
+  padding: 1rem;
+  background-color: var(--card-background-color);
+  text-align: center;
+  border-bottom: 1px solid var(--border-color);
+}
+
+main {
+  padding: 1rem;
+}
+
+.kanban-board {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.kanban-column {
+  flex: 1;
+  padding: 0 1rem;
+  border-right: 1px solid var(--border-color);
+}
+
+.kanban-column:last-child {
+  border-right: none;
+}
+
+.kanban-column h3 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.task-card {
+  background-color: var(--card-background-color);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 4px var(--box-shadow-color);
+}
+
+.task-card h3 {
+  margin-top: 0;
+  font-size: 1.25rem;
+}
+
+.button-group {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 1rem;
+}
+
+.button-group button {
+  background-color: var(--button-background-color);
+  border: none;
+  color: var(--button-text-color);
+  padding: 0.5rem 1rem;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 0.875rem;
+  margin: 0.2rem;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.button-group button:hover {
+  background-color: var(--button-hover-background-color);
+}
