@@ -5,7 +5,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
       <head>
-        <title>My Project Roadmap</title>
+        <title>Portfolio Roadmap</title>
         <meta name="description" content="Project Roadmap Kanban Board" />
       </head>
       <body>
@@ -13,7 +13,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           <h1>My Project Roadmap</h1>
         </header>
         <main>{children}</main>
-        <footer>Footer Content</footer>
+        <footer>Made by Roger Connolly</footer>
       </body>
     </html>
   );
