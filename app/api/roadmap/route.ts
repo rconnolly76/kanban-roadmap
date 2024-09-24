@@ -5,7 +5,10 @@ const roadmapAPI = 'https://sitecore.atlassian.net/rest/api/3/search?jql=project
 export async function GET() {
   try {
     // Fetch data from the external API
-    const response = await fetch(roadmapAPI);
+    const response = await fetch(roadmapAPI, {
+      headers: {
+        'Authorization': `Basic ${Buffer.from(`${process.env.JIRA_USERNAME}:${process.env.JIRA_API_TOKEN}`).toString('base64')}`
+    }});
 
     if (!response.ok) {
       return NextResponse.json({ error: 'Failed to fetch data from external API' }, { status: 500 });
