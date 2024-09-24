@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
 
-const roadmapAPI = 'https://sitecore.atlassian.net/rest/api/3/search?jql=project=SMAP&fields=summary,status,customfield_15464; // Replace with your actual API endpoint
+const roadmapAPI = 'https://sitecore.atlassian.net/rest/api/3/search?jql=project=SMAP&fields=summary,status,customfield_15464'; // Replace with your actual API endpoint
 
 export async function GET() {
   try {
